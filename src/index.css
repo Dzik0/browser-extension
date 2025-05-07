@@ -1,8 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* FONTS */
+  --font: 'Noto Sans';
+
+  /* COLORS */
+  /* Neutral Colors */
+  --neutral-900: hsl(227, 75%, 14%);
+  --neutral-800: hsl(226, 25%, 17%);
+  --neutral-700: hsl(225, 23%, 24%);
+  --neutral-600: hsl(226, 11%, 37%);
+  --neutral-300: hsl(0, 0%, 78%);
+  --neutral-200: hsl(217, 61%, 90%);
+  --neutral-100: hsl(0, 0%, 93%);
+  --neutral-0: hsl(200, 60%, 99%);
+
+  /* Red Colors */
+  --red-400: hsl(3, 86%, 64%);
+  --red-500: hsl(3, 71%, 56%);
+  --red-700: hsl(3, 77%, 44%);
+
+  /* Gradients */
+  --light-gradient: linear-gradient(180deg, #ebf2fc 0%, #eef8f9 100%);
+  --dark-gradient: linear-gradient(180deg, #040918 0%, #091540 100%);
+
+  /* TYPOGRAPHY*/
+  /* Text Preset 1 */
+  --text-1-font-family: 'Noto Sans', sans-serif;
+  --text-1-font-weight: 700; /* Bold */
+  --text-1-font-size: 2.125rem; /* 34px */
+  --text-1-line-height: 1; /* 100% */
+  --text-1-letter-spacing: -0.0625rem; /* -1px */
+
+  /* Text Preset 2 */
+  --text-2-font-family: 'Noto Sans', sans-serif;
+  --text-2-font-weight: 700; /* Bold */
+  --text-2-font-size: 1.25rem; /* 20px */
+  --text-2-line-height: 1.2; /* 120% */
+  --text-2-letter-spacing: -0.0125rem; /* -0.2px */
+
+  /* Text Preset 3 */
+  --text-3-font-family: 'Noto Sans', sans-serif;
+  --text-3-font-weight: 400; /* Regular */
+  --text-3-font-size: 1.25rem; /* 20px */
+  --text-3-line-height: 1.4; /* 140% */
+  --text-3-letter-spacing: -0.01875rem; /* -0.3px */
+
+  /* Text Preset 4 */
+  --text-4-font-family: 'Noto Sans', sans-serif;
+  --text-4-font-weight: 500; /* Medium */
+  --text-4-font-size: 1.25rem; /* 20px */
+  --text-4-line-height: 1.4; /* 140% */
+  --text-4-letter-spacing: -0.01875rem; /* -0.3px */
+
+  /* Text Preset 5 */
+  --text-5-font-family: 'Noto Sans', sans-serif;
+  --text-5-font-weight: 400; /* Regular */
+  --text-5-font-size: 1rem; /* 16px */
+  --text-5-line-height: 1.4; /* 140% */
+  --text-5-letter-spacing: -0.03125rem; /* -0.5px */
+
+  /* Text Preset 6 */
+  --text-6-font-family: 'Noto Sans', sans-serif;
+  --text-6-font-weight: 500; /* Medium */
+  --text-6-font-size: 1rem; /* 16px */
+  --text-6-line-height: 1.4; /* 140% */
+  --text-6-letter-spacing: -0.03125rem; /* -0.5px */
+}
+
 * {
   box-sizing: border-box;
 }
 
 Body {
+  font-family: var(--font);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
 }
@@ -31,4 +102,52 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+.text-preset-1 {
+  font-family: var(--text-1-font-family);
+  font-weight: var(--text-1-font-weight);
+  font-size: var(--text-1-font-size);
+  line-height: var(--text-1-line-height);
+  letter-spacing: var(--text-1-letter-spacing);
+}
+
+.text-preset-2 {
+  font-family: var(--text-2-font-family);
+  font-weight: var(--text-2-font-weight);
+  font-size: var(--text-2-font-size);
+  line-height: var(--text-2-line-height);
+  letter-spacing: var(--text-2-letter-spacing);
+}
+
+.text-preset-3 {
+  font-family: var(--text-3-font-family);
+  font-weight: var(--text-3-font-weight);
+  font-size: var(--text-3-font-size);
+  line-height: var(--text-3-line-height);
+  letter-spacing: var(--text-3-letter-spacing);
+}
+
+.text-preset-4 {
+  font-family: var(--text-4-font-family);
+  font-weight: var(--text-4-font-weight);
+  font-size: var(--text-4-font-size);
+  line-height: var(--text-4-line-height);
+  letter-spacing: var(--text-4-letter-spacing);
+}
+
+.text-preset-5 {
+  font-family: var(--text-5-font-family);
+  font-weight: var(--text-5-font-weight);
+  font-size: var(--text-5-font-size);
+  line-height: var(--text-5-line-height);
+  letter-spacing: var(--text-5-letter-spacing);
+}
+
+.text-preset-6 {
+  font-family: var(--text-6-font-family);
+  font-weight: var(--text-6-font-weight);
+  font-size: var(--text-6-font-size);
+  line-height: var(--text-6-line-height);
+  letter-spacing: var(--text-6-letter-spacing);
 }
