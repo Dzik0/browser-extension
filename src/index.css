@@ -76,6 +76,11 @@ Body {
   font-family: var(--font);
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  background-image: var(--light-gradient);
+
+  padding: 1rem;
 }
 
 Img,
@@ -102,6 +107,8 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+  margin: 0;
+  padding: 0;
 }
 
 .text-preset-1 {
@@ -150,4 +157,121 @@ h6 {
   font-size: var(--text-6-font-size);
   line-height: var(--text-6-line-height);
   letter-spacing: var(--text-6-letter-spacing);
+}
+
+/* HEADER CSS */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.5rem;
+  gap: 6rem;
+  margin-bottom: 2rem;
+  /*   border: 1px solid blue; */
+}
+
+.mode-container {
+  background-color: var(--neutral-100);
+  padding: 0.7rem;
+  border-radius: 0.5rem;
+}
+
+/* MAIN APP CSS */
+.prime-container {
+  /*  border: 1px solid red; */
+}
+
+.upper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.upper-btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.upper-btn {
+  padding: 0.4rem 1.3rem;
+  border: none;
+  background-color: white;
+  border-radius: 2rem;
+}
+
+/* SINGLE ITEM  */
+.item-box {
+  padding: 1.2rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+.item-info-box {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info-box-img img {
+  width: 7rem;
+}
+
+.info-box-info p {
+  color: var(--neutral-600);
+  padding-right: 1rem;
+}
+
+.item-btns-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remove-btn {
+  border: 1px solid rgba(128, 128, 128, 0.393);
+  background-color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 2rem;
+}
+
+.move-btn-active {
+  width: 3rem;
+  height: 1.5rem;
+  background-color: rgb(181, 31, 31);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.move-btn-ball-active {
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.move-btn-non {
+  width: 3rem;
+  height: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.174);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0.2rem;
+}
+
+.move-btn-ball-non {
+  width: 1rem;
+  height: 1rem;
+  background-color: white;
+  border-radius: 50%;
 }
