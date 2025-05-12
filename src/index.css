@@ -179,8 +179,14 @@ header {
 }
 
 /* MAIN APP CSS */
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
 .prime-container {
-  /*  border: 1px solid red; */
+  border: none;
 }
 
 .upper-container {
