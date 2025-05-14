@@ -247,7 +247,7 @@ main {
 }
 
 .move-btn-active {
-  width: 3rem;
+  width: 2.8rem;
   height: 1.5rem;
   background-color: rgb(181, 31, 31);
   border-radius: 2rem;
@@ -257,7 +257,7 @@ main {
   padding: 0.2rem;
 }
 
-.move-btn-ball-active {
+.move-btn-ball {
   width: 1rem;
   height: 1rem;
   background-color: white;
@@ -265,7 +265,7 @@ main {
 }
 
 .move-btn-non {
-  width: 3rem;
+  width: 2.8rem;
   height: 1.5rem;
   background-color: rgba(0, 0, 0, 0.174);
   border-radius: 2rem;
@@ -273,11 +273,4 @@ main {
   justify-content: start;
   align-items: center;
   padding: 0.2rem;
-}
-
-.move-btn-ball-non {
-  width: 1rem;
-  height: 1rem;
-  background-color: white;
-  border-radius: 50%;
 }

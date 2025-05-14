@@ -16,8 +16,8 @@ function Extension() {
       </div>
       <div className="item-btns-box">
         <button className="remove-btn text-preset-6">Remove</button>
-        <div className="move-btn-non">
-          <div className="move-btn-ball-non"></div>
+        <div className="move-btn-active">
+          <div className="move-btn-ball"></div>
         </div>
       </div>
     </div>
