@@ -70,6 +70,7 @@
 
 * {
   box-sizing: border-box;
+  overscroll-behavior: none;
 }
 
 Body {
@@ -78,9 +79,6 @@ Body {
   -webkit-font-smoothing: antialiased;
   margin: 0;
   padding: 0;
-  background-image: var(--light-gradient);
-
-  padding: 1rem;
 }
 
 Img,
@@ -164,18 +162,28 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
   padding: 0.5rem 0.5rem;
   border-radius: 0.5rem;
   gap: 6rem;
   margin-bottom: 2rem;
   /*   border: 1px solid blue; */
+  background-color: white;
+  transition-duration: 0.5s;
+}
+
+.header-dark-mode {
+  background-color: var(--neutral-800);
 }
 
 .mode-container {
-  background-color: var(--neutral-100);
   padding: 0.7rem;
   border-radius: 0.5rem;
+  background-color: var(--neutral-100);
+  transition-duration: 0.5s;
+}
+
+.mode-container-dark-mode {
+  background-color: var(--neutral-700);
 }
 
 /* MAIN APP CSS */
@@ -187,6 +195,15 @@ main {
 
 .prime-container {
   border: none;
+  min-height: 100vh;
+  padding: 1rem;
+  background-image: var(--light-gradient);
+  transition-duration: 1s;
+}
+
+.prime-container-dark-mode {
+  background-image: var(--dark-gradient);
+  transition-duration: 1s;
 }
 
 .upper-container {
@@ -195,6 +212,10 @@ main {
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
+}
+
+.h2-dark-mode {
+  color: white;
 }
 
 .upper-btn-container {
@@ -209,11 +230,25 @@ main {
   border-radius: 2rem;
 }
 
+.upper-btn:hover {
+  cursor: pointer;
+  background-color: var(--red-500);
+}
+
+.upper-btn-dark-mode {
+  background-color: var(--neutral-700);
+  color: white;
+}
+
 /* SINGLE ITEM  */
 .item-box {
   padding: 1.2rem;
   background-color: white;
   border-radius: 1rem;
+}
+
+.item-box-dark-mode {
+  background-color: var(--neutral-800);
 }
 
 .item-info-box {
@@ -227,9 +262,23 @@ main {
   width: 7rem;
 }
 
-.info-box-info p {
+.info-box-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.h3-dark-mode {
+  color: white;
+}
+
+.info-p {
   color: var(--neutral-600);
   padding-right: 1rem;
+}
+
+.info-p-dark-mode {
+  color: white;
 }
 
 .item-btns-box {
@@ -241,9 +290,13 @@ main {
 
 .remove-btn {
   border: 1px solid rgba(128, 128, 128, 0.393);
-  background-color: white;
-  padding: 0.5rem 0.9rem;
+  background-color: transparent;
+  padding: 0.5rem 1.2rem;
   border-radius: 2rem;
+}
+
+.remove-btn-dark-mode {
+  color: white;
 }
 
 .move-btn-active {
