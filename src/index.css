@@ -295,19 +295,32 @@ main {
   border-radius: 2rem;
 }
 
+.remove-btn:hover {
+  background-color: var(--red-500);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
 .remove-btn-dark-mode {
   color: white;
 }
 
-.move-btn-active {
+.move-btn {
   width: 2.8rem;
   height: 1.5rem;
-  background-color: rgb(181, 31, 31);
+  background-color: rgba(0, 0, 0, 0.174);
   border-radius: 2rem;
   display: flex;
-  justify-content: end;
+  position: relative;
+
   align-items: center;
-  padding: 0.2rem;
+  padding: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.move-btn-active {
+  background-color: rgb(181, 31, 31);
 }
 
 .move-btn-ball {
@@ -315,15 +328,10 @@ main {
   height: 1rem;
   background-color: white;
   border-radius: 50%;
+  transition: transform 0.5s ease;
+  transform: translateX(0);
 }
 
-.move-btn-non {
-  width: 2.8rem;
-  height: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.174);
-  border-radius: 2rem;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  padding: 0.2rem;
+.move-btn-ball-active {
+  transform: translateX(1.15rem);
 }

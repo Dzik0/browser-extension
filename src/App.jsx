@@ -1,13 +1,40 @@
 import clsx from 'clsx';
 import Header from './comps/Header.jsx';
 import Extension from './comps/Extension.jsx';
-import { useEffect, useState } from 'react';
+import data from './data.json';
+import { useState } from 'react';
 
 function App() {
+  //STATES
   const [darkMode, setDarkMode] = useState(false);
+  const [apps, setApps] = useState(data);
+  console.log(apps);
 
+  //HTML ELEMENTS
+  const extensionList = apps.map((extension) => (
+    <Extension
+      key={extension.id}
+      darkMode={darkMode}
+      info={extension}
+      toggleExtension={toggleExtension}
+    />
+  ));
+
+  //FUNCTIONS
   function toggleDarkMode() {
     setDarkMode((prevV) => !prevV);
+  }
+
+  function toggleExtension(id) {
+    setApps((prevP) =>
+      prevP.map((extension) => {
+        if (extension.id === id) {
+          return { ...extension, isActive: !extension.isActive };
+        }
+
+        return extension;
+      })
+    );
   }
 
   return (
@@ -52,9 +79,7 @@ function App() {
           </button>
         </div>
       </div>
-      <main>
-        <Extension darkMode={darkMode} />
-      </main>
+      <main>{extensionList}</main>
     </div>
   );
 }
