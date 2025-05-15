@@ -1,12 +1,88 @@
-# React + Vite
+# 🧩 Extensions Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A sleek, user-friendly React app for managing browser extensions. Filter active and inactive extensions, toggle their status, and switch between dark and light mode—all in a clean and modern interface.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✅ Toggle extensions on/off
+- 🗑 Remove extensions from the list
+- 🎯 Filter by All / Active / Inactive
+- 🌗 Light and Dark Mode support
+- ⚛️ Built with React + clsx
 
-## Expanding the ESLint configuration
+## 📸 Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+![Extensions Manager Screenshot](./screenshot.jpg)
+
+➡️ Live site: https://dzik0.github.io/browser-extension/
+
+## 🚀 Tech Stack
+
+- **React** (Functional components + Hooks)
+- **clsx** for conditional class styling
+- **Modular components** (`Header`, `Extension`, `FilterButton`)
+- **JSON** as local data source
+
+## 🧠 Code Overview
+
+### State Management
+
+- `apps`: The main extension list loaded from `data.json`
+- `filter`: Current filter state (1 = All, 2 = Active, 3 = Inactive)
+- `darkMode`: Boolean flag to switch UI theme
+
+### Core Functions
+
+- `toggleExtension(id)` – Toggle an extension's active state
+- `removeExtension(id)` – Remove an extension from the list
+- `changeFilter(id)` – Change the current filter view
+- `toggleDarkMode()` – Toggle between light/dark UI
+
+### Filtering Logic
+
+```js
+const appsOn = apps.filter((item) => item.isActive);
+const appsOff = apps.filter((item) => !item.isActive);
+```
+
+### Render Logic
+
+`renderExtensions()` handles the conditional rendering based on filter and extension availability.
+
+## 📂 Project Structure
+
+```
+src/
+├── comps/
+│   ├── Header.jsx
+│   ├── Extension.jsx
+│   └── FilterButton.jsx
+├── data.json
+├── App.jsx
+├── main.js
+└── styles.css
+```
+
+## 🛠 Setup & Installation
+
+1. **Clone the repo:**
+
+   ```bash
+   git clone https://github.com/your-username/extensions-manager.git
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
