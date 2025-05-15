@@ -1,6 +1,6 @@
 # 🧩 Extensions Manager
 
-A sleek, user-friendly React app for managing browser extensions. Filter active and inactive extensions, toggle their status, and switch between dark and light mode—all in a clean and modern interface.
+A modern, lightweight extensions manager built with React and Vite. It lets users toggle, filter, and remove extensions in a responsive, dark-mode-ready interface.
 
 ## ✨ Features
 
@@ -8,7 +8,7 @@ A sleek, user-friendly React app for managing browser extensions. Filter active 
 - 🗑 Remove extensions from the list
 - 🎯 Filter by All / Active / Inactive
 - 🌗 Light and Dark Mode support
-- ⚛️ Built with React + clsx
+- ⚡ Powered by React + Vite
 
 ## 📸 Preview
 
