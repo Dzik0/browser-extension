@@ -168,7 +168,7 @@ header {
   margin-bottom: 2rem;
   /*   border: 1px solid blue; */
   background-color: white;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 .header-dark-mode {
@@ -179,7 +179,7 @@ header {
   padding: 0.7rem;
   border-radius: 0.5rem;
   background-color: var(--neutral-100);
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 
 .mode-container-dark-mode {
@@ -232,7 +232,7 @@ main {
 
 .upper-btn:hover {
   cursor: pointer;
-  background-color: var(--red-500);
+  background-color: var(--neutral-200);
 }
 
 .upper-btn-dark-mode {
@@ -240,6 +240,14 @@ main {
   color: white;
 }
 
+.upper-btn-dark-mode:hover {
+  cursor: pointer;
+  background-color: var(--neutral-600);
+}
+
+.upper-btn-highlighted {
+  background-color: var(--red-500);
+}
 /* SINGLE ITEM  */
 .item-box {
   padding: 1.2rem;
@@ -334,4 +342,19 @@ main {
 
 .move-btn-ball-active {
   transform: translateX(1.15rem);
+}
+
+.empty-extensions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.empty-extensions h2 {
+  font-size: 2rem;
+}
+
+.empty-extensions-dark-mode {
+  color: white;
 }

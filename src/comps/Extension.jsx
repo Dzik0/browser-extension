@@ -1,7 +1,7 @@
 import img from '../assets/logo-speed-boost.svg';
 import clsx from 'clsx';
 
-function Extension({ darkMode, info, toggleExtension }) {
+function Extension({ darkMode, info, toggleExtension, removeExtension }) {
   return (
     <div className={clsx('item-box', darkMode && 'item-box-dark-mode')}>
       <div className="item-info-box">
@@ -29,6 +29,9 @@ function Extension({ darkMode, info, toggleExtension }) {
             'remove-btn text-preset-6',
             darkMode && 'remove-btn-dark-mode'
           )}
+          onClick={() => {
+            removeExtension(info.id);
+          }}
         >
           Remove
         </button>
