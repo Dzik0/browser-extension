@@ -193,6 +193,18 @@ main {
   gap: 1rem;
 }
 
+@media (min-width: 760px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
 .prime-container {
   border: none;
   min-height: 100vh;
@@ -235,6 +247,10 @@ main {
   background-color: var(--neutral-200);
 }
 
+.upper-btn:focus {
+  outline: 1px solid red;
+}
+
 .upper-btn-dark-mode {
   background-color: var(--neutral-700);
   color: white;
@@ -247,6 +263,7 @@ main {
 
 .upper-btn-highlighted {
   background-color: var(--red-500);
+  color: white;
 }
 /* SINGLE ITEM  */
 .item-box {
@@ -266,8 +283,8 @@ main {
   margin-bottom: 1.5rem;
 }
 
-.info-box-img img {
-  width: 7rem;
+.info-box-img {
+  min-width: 60px;
 }
 
 .info-box-info {
@@ -307,10 +324,19 @@ main {
   background-color: var(--red-500);
   cursor: pointer;
   border: 1px solid transparent;
+  color: white;
+}
+
+.remove-btn:focus {
+  outline: 1px solid red;
 }
 
 .remove-btn-dark-mode {
   color: white;
+}
+
+.remove-btn-dark-mode:hover {
+  color: var(--neutral-800);
 }
 
 .move-btn {
@@ -320,11 +346,15 @@ main {
   border-radius: 2rem;
   display: flex;
   position: relative;
-
+  border: none;
   align-items: center;
   padding: 0.3rem;
   cursor: pointer;
   transition: background-color 0.5s ease;
+}
+
+.move-btn:focus {
+  outline: 1px solid red;
 }
 
 .move-btn-active {

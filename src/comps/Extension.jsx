@@ -6,7 +6,7 @@ function Extension({ darkMode, info, toggleExtension, removeExtension }) {
     <div className={clsx('item-box', darkMode && 'item-box-dark-mode')}>
       <div className="item-info-box">
         <div className="info-box-img">
-          <img src={info.logo} alt="" />
+          <img className="logo-box" src={info.logo} alt="" />
         </div>
         <div className="info-box-info">
           <h3 className={clsx('text-preset-2', darkMode && 'h3-dark-mode')}>
@@ -35,7 +35,7 @@ function Extension({ darkMode, info, toggleExtension, removeExtension }) {
         >
           Remove
         </button>
-        <div
+        <button
           className={clsx(
             'move-btn',
             info.isActive && 'move-btn-active',
@@ -51,7 +51,7 @@ function Extension({ darkMode, info, toggleExtension, removeExtension }) {
               info.isActive && 'move-btn-ball-active'
             )}
           ></div>
-        </div>
+        </button>
       </div>
     </div>
   );
