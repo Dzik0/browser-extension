@@ -117,34 +117,36 @@ function App() {
   }
 
   return (
-    <div
-      className={clsx(
-        'prime-container',
-        darkMode && 'prime-container-dark-mode'
-      )}
-    >
-      <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
-      <div className="upper-container">
-        <h2 className={clsx('text-preset-1', darkMode && 'h2-dark-mode')}>
-          Extensions List
-        </h2>
-        <div className="upper-btn-container">{filterButtons}</div>
-      </div>
-      <main>
-        {renderExtensions()}
-        {apps.length === 0 && filter === 1 ? (
-          <div
-            className={clsx(
-              'empty-extensions',
-              darkMode && 'empty-extensions-dark-mode'
-            )}
-          >
-            <h2>You have no installed extensions! 😢</h2>
-          </div>
-        ) : (
-          ''
+    <div className={clsx('main-div', darkMode && 'main-div-dark-mode')}>
+      <div
+        className={clsx(
+          'prime-container',
+          darkMode && 'prime-container-dark-mode'
         )}
-      </main>
+      >
+        <Header toggleDarkMode={toggleDarkMode} darkMode={darkMode} />
+        <div className="upper-container">
+          <h2 className={clsx('text-preset-1', darkMode && 'h2-dark-mode')}>
+            Extensions List
+          </h2>
+          <div className="upper-btn-container">{filterButtons}</div>
+        </div>
+        <main>
+          {renderExtensions()}
+          {apps.length === 0 && filter === 1 ? (
+            <div
+              className={clsx(
+                'empty-extensions',
+                darkMode && 'empty-extensions-dark-mode'
+              )}
+            >
+              <h2>You have no installed extensions! 😢</h2>
+            </div>
+          ) : (
+            ''
+          )}
+        </main>
+      </div>
     </div>
   );
 }

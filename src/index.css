@@ -205,17 +205,22 @@ main {
   }
 }
 
+.main-div {
+  background-image: var(--light-gradient);
+  display: flex;
+  justify-content: center;
+}
+
+.main-div-dark-mode {
+  background-image: var(--dark-gradient);
+}
+
 .prime-container {
   border: none;
   min-height: 100vh;
   padding: 1rem;
-  background-image: var(--light-gradient);
-  transition-duration: 1s;
-}
-
-.prime-container-dark-mode {
-  background-image: var(--dark-gradient);
-  transition-duration: 1s;
+  max-width: 1800px;
+  background-color: transparent;
 }
 
 .upper-container {
