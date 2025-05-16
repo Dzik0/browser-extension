@@ -207,8 +207,6 @@ main {
 
 .main-div {
   background-image: var(--light-gradient);
-  display: flex;
-  justify-content: center;
 }
 
 .main-div-dark-mode {
@@ -221,6 +219,7 @@ main {
   padding: 1rem;
   max-width: 1800px;
   background-color: transparent;
+  margin-inline: auto;
 }
 
 .upper-container {
@@ -229,6 +228,13 @@ main {
   align-items: center;
   gap: 1rem;
   margin-bottom: 2rem;
+}
+
+@media (width > 760px) {
+  .upper-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .h2-dark-mode {
@@ -392,4 +398,8 @@ main {
 
 .empty-extensions-dark-mode {
   color: white;
+}
+
+.grid-fix {
+  grid-template-columns: 1fr;
 }

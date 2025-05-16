@@ -82,34 +82,10 @@ function App() {
 
   function renderExtensions() {
     if (filter === 3) {
-      if (appsOff.length === 0) {
-        return (
-          <div
-            className={clsx(
-              'empty-extensions',
-              darkMode && 'empty-extensions-dark-mode'
-            )}
-          >
-            <h2>You have no inactive extensions!</h2>
-          </div>
-        );
-      }
       return appsOffList;
     }
 
     if (filter === 2) {
-      if (appsOn.length === 0) {
-        return (
-          <div
-            className={clsx(
-              'empty-extensions',
-              darkMode && 'empty-extensions-dark-mode'
-            )}
-          >
-            <h2>You have no active extensions! 😢</h2>
-          </div>
-        );
-      }
       return appsOnList;
     }
 
@@ -131,21 +107,43 @@ function App() {
           </h2>
           <div className="upper-btn-container">{filterButtons}</div>
         </div>
-        <main>
-          {renderExtensions()}
-          {apps.length === 0 && filter === 1 ? (
-            <div
-              className={clsx(
-                'empty-extensions',
-                darkMode && 'empty-extensions-dark-mode'
-              )}
-            >
-              <h2>You have no installed extensions! 😢</h2>
-            </div>
-          ) : (
-            ''
-          )}
-        </main>
+        <main>{renderExtensions()}</main>
+        {apps.length === 0 && filter === 1 ? (
+          <div
+            className={clsx(
+              'empty-extensions',
+              darkMode && 'empty-extensions-dark-mode'
+            )}
+          >
+            <h2>You have no installed extensions! 😢</h2>
+          </div>
+        ) : (
+          ''
+        )}
+        {appsOn.length === 0 && filter === 2 ? (
+          <div
+            className={clsx(
+              'empty-extensions',
+              darkMode && 'empty-extensions-dark-mode'
+            )}
+          >
+            <h2>You have no active extensions! 😢</h2>
+          </div>
+        ) : (
+          ''
+        )}
+        {appsOff.length === 0 && filter === 3 ? (
+          <div
+            className={clsx(
+              'empty-extensions',
+              darkMode && 'empty-extensions-dark-mode'
+            )}
+          >
+            <h2>You have no inactive extensions! 😢</h2>
+          </div>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   );
